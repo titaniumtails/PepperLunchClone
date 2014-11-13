@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>Pepper Lunch Time</title>
   <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %>
@@ -45,23 +45,17 @@
 	</nav>
 
 	<div class="container">
-	  <div class="starter-template">
-	  </div>
-
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h2>Hello {{yourName}}!</h2>
 
 
 		<%= yield %>
 	
 	</div><!-- /.container -->
 
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 </html>
