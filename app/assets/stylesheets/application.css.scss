@@ -14,6 +14,32 @@
  *= require_self
  */
 
+ /* VARIABLES */
+
+$nav-top: 70px;
+
+/* THE STYLES */
+
  body {
-	padding-top: 70px;
+	padding-top: $nav-top;
+}
+
+.timetable {
+	.week {
+		.weeknum {
+			text-align: right;
+			font-size: 18px;
+			font-weight: 500;
+			padding-bottom: 0.72em;
+			padding-top: 0.72em;
+		}
+		.day {
+			padding: 5px;
+			text-align: center;
+			div {
+				width: 100px;
+				height:30px;
+			}
+		}
+	}
 }
