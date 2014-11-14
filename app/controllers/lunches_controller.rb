@@ -1,6 +1,9 @@
 class LunchesController < ApplicationController
   before_action :set_lunch, only: [:show, :edit, :update, :destroy]
 
+  def sumbit
+  end
+
   # GET /lunches
   # GET /lunches.json
   def index

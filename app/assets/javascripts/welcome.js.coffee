@@ -4,7 +4,7 @@
 
 app = angular.module("pepperApp", [])
 
-app.controller("TimetableCtrl", ["$scope", ($scope) -> 
+app.controller("TimetableCtrl", ["$scope", "$http", ($scope, $http) -> 
   $scope.weeks = []
   $scope.lunchCount = 0
 
@@ -26,6 +26,20 @@ app.controller("TimetableCtrl", ["$scope", ($scope) ->
       "btn-success"
     else 
       "btn-danger"
+
+  $scope.btnWords = (count) ->
+    if dayvalue is 0
+      $scope.btnWords = "bleh"
+    else 
+      $scope.btnWords = "yum"
+
+  $scope.submitCount = ->
+    jsonObj = {"keydata": $scope.weeks}
+    $http.post('/api/lunches/submit.json', jsonObj)
+      .success (rawdata) ->
+        console.log rawdata
+      .error (rawdata) ->
+        console.log rawdata
 
   $scope.init()
 ])

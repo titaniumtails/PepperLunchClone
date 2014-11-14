@@ -4,11 +4,15 @@
 
   <h2>You have taken {{ lunchCount }} times of PepperLunch</h2>
 
+  <div class ="row">
+    <div class="col-md-2 col-md-offset-5 btn btn-success" ng-click="sumbmitCount()">Save</div>
+  </div>
+
   <div class="row week" ng-repeat="week in weeks">
     <div class="col-md-2 number">Week {{ $index+1 }}</div>
     
     <div class="col-md-2 day" ng-repeat="day in week track by $index">
-      <div class="btn" ng-class="btnClass(day)" ng-click="increment($parent.$index, $index)">yum
+      <div class="btn" ng-class="btnClass(day)" ng-click="increment($parent.$index, $index)"> {{ $scope.btnWords(day)}}
       </div>
     
   </div>
