@@ -8,8 +8,8 @@
     <div class="col-md-2 number">Week {{ $index+1 }}</div>
     
     <div class="col-md-2 day" ng-repeat="day in week track by $index">
-      <div class="btn btn-success" ng-click="increment($parent.$index, $index)">yes</div>
-    </div>
-
+      <div class="btn" ng-class="btnClass(day)" ng-click="increment($parent.$index, $index)">yum
+      </div>
+    
   </div>
 </div>

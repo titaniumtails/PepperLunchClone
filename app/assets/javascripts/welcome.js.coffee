@@ -13,13 +13,19 @@ app.controller("TimetableCtrl", ["$scope", ($scope) ->
       $scope.weeks.push [0, 0, 0, 0, 0]
 
   $scope.increment = (weekrow, daycol) ->
-    if scope.increment[weekrow][daycol] is 1
-      scope.increment[weekrow][daycol] = 1
+    if $scope.weeks[weekrow][daycol] is 0
+      $scope.weeks[weekrow][daycol] = 1
       $scope.lunchCount += 1
 
     else 
-      scope.increment[weekrow][daycol] is 0
+      $scope.weeks[weekrow][daycol] = 0
       $scope.lunchCount -= 1
+
+  $scope.btnClass = (dayvalue) ->
+    if dayvalue is 0
+      "btn-success"
+    else 
+      "btn-danger"
 
   $scope.init()
 ])
