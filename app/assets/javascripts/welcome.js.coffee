@@ -27,11 +27,11 @@ app.controller("TimetableCtrl", ["$scope", "$http", ($scope, $http) ->
     else 
       "btn-danger"
 
-  $scope.btnWords = (count) ->
+  $scope.btnWords = (dayvalue) ->
     if dayvalue is 0
-      $scope.btnWords = "bleh"
+      "yum"
     else 
-      $scope.btnWords = "yum"
+      "bleh"
 
   $scope.submitCount = ->
     jsonObj = {"keydata": $scope.weeks}

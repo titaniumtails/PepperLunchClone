@@ -4,6 +4,9 @@ class LunchesController < ApplicationController
   def sumbit
   end
 
+  def mylunches
+  end
+
   # GET /lunches
   # GET /lunches.json
   def index

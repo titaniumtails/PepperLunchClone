@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   scope :api do
     resources :lunches, only: [:index, :show, :create] do
       post 'submit', on: :collection
-      get 'data', on: :collection
+      get 'mylunches', on: :collection
     end
   end
 
