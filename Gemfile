@@ -36,6 +36,7 @@ group :development do
   #> https://github.com/charliesome/better_errors
   gem 'better_errors'
   gem 'binding_of_caller'  # adding REPL
+  gem 'letter_opener'
 
   # RailsPanel is a Chrome extension for Rails development that will end your tailing of development.log
   # Have all information about your Rails app requests right there in the Developer Tools panel.

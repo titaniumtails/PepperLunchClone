@@ -1,0 +1,18 @@
+<h1><%= @greeting %></h1>
+
+<p>Thank you for eating another Pepper Lunch! We're <b>so excited</b> that you've come back again and again. to have delicious PepperLunch. You've eaten lunch at Pepper Lunch <%= @lunch_count %> times! Wow!</p>
+
+<p>Here's a little tracking we did to help you track your Pepper Lunches so far:</p>
+<% @lunch_count.each do |lc| %>
+<ul>
+  <li><% lc %></li>
+</ul>
+<% end %>
+
+<p>We'd like to offer you a special program for our VIP customers. Track your PepperLunch and there will be some special discounts for you.</p> 
+
+<p>Here's the link to our Secret PepperLunch site:</p>
+
+<p>See you again next week ;)</p>
+
+ <p>-PepperLunch Masterchef</p>
